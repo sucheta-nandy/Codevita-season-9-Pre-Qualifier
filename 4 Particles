@@ -1,0 +1,120 @@
+4 Particles
+Problem Description
+There is a cube of height H, and there are 4 moving particles on the vertical edges of the cube. Initially particles are at some height A, B, C and D respectively. These particles are moving in different direction (Only upward or downward, no sideways movement) with different speed.
+
+If the particle is moving upward or downward reaches the tip of the cube then it remain at the tip only and will not move further. If other particles have not reach the tip they continue to move along their respective edges in their respective direction till the last particle reaches the tip.
+
+These 4 particles will make two triangles in a 3-D plane. Since the particles are moving, sum of the area of these two triangles will change every moment.
+
+Find out the maximum and minimum of the sum of the areas of these two triangles.
+
+Refer the Examples section for better understanding.
+
+Constraints
+1 <= H <= 100
+
+0 <= A, B, C, D <= H
+
+0 <= V1, V2, V3, V4 <= 100
+
+Input
+First line contains an integer H which denotes the length of the side of cube.
+
+Second line contains 4 space separated integers denoting the initial position of all 4 particles on the 4 vertical edges, say A, B, C and D respectively.
+
+Third line contains 4 space separated integers denoting the speed of all particles, say V1, V2, V3, and V4 per time unit respectively.
+
+Fourth line contains 4 space separated characters U or D denoting the direction of movement of particles. U denotes the upward direction and D denotes the downward direction.
+
+Output
+Print 2 space separated integers which denote the value
+
+[4 * [Max (sum of area of triangle ABC and area of triangle ADC)]2] and
+
+[4 * [Min (sum of area of triangle ABC and area of triangle ADC)]2]
+
+respectively. If the above values are decimal value round them off to nearest integer.
+
+Time Limit
+1
+
+Examples
+Example 1
+
+Input
+
+10
+
+5 5 5 5
+
+1 1 1 1
+
+U U D D
+
+Output
+
+80000 40000
+
+Explanation
+
+The movement per time unit is depicted as shown in the diagrams below.
+
+com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@6ebd1a26:image3.png com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@6ebd1a26:image4.png com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@6ebd1a26:image5.png com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@6ebd1a26:image6.png com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@6ebd1a26:image7.png com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@6ebd1a26:image8.png
+
+Note: Within a state the area of sum of triangle ABC and triangle ADC is constant. The MAXAREA and MINAREA terms used in the diagrams above are used to keep a track of maximum area and minimum area achieved until that point in time.
+
+MAXAREA = [4 * [Max (sum of area of triangle ABC and area of triangle ADC)]2]
+
+MINAREA = [4 * [Min (sum of area of triangle ABC and area of triangle ADC)]2]
+
+
+Example 2
+
+Input
+
+10
+
+5 5 5 5
+
+1 2 1 2
+
+D U U D
+
+Output
+
+80000 40000
+
+Explanation:
+
+Note: Within a state the area of sum of triangle ABC and triangle ADC is constant. The MAXAREA and MINAREA terms used in the diagrams above are used to keep a track of maximum area and minimum area achieved until that point in time.
+
+MAXAREA = [4 * [Max (sum of area of triangle ABC and area of triangle ADC)]2
+
+MINAREA = [4 * [Min (sum of area of triangle ABC and area of triangle ADC)]2]
+
+
+Example 3
+
+Input
+
+10
+
+5 5 5 5
+
+1 1 1 1
+
+U D U D
+
+Output
+
+120000 40000
+
+Explanation
+a26:image20.png
+
+Note: Within a state the area of sum of triangle ABC and triangle ADC is constant. The MAXAREA and MINAREA terms used in the diagrams above are used to keep a track of maximum area and minimum area achieved until that point in time.
+
+MAXAREA = [4 * [Max (sum of area of triangle ABC and area of triangle ADC)]2]
+
+MINAREA = [4 * [Min (sum of area of triangle ABC and area of triangle ADC)]2]
+
